@@ -1,15 +1,11 @@
-# add stages here 
+# add stages here
 stages:
   get_data:
     cmd: python src/stage_01_get_data.py --config=configs/config.yaml
     deps:
-    - src/stage_01_get_data.py
-    - src/utils/common.py
-    - configs/config.yaml
+      - src/stage_01_get_data.py
+      - src/utils/common.py
+      - configs/config.yaml
     outs:
-    - data/cat
-    - data/dog
-    
-
-
-
+      - data/cat
+      - data/dog

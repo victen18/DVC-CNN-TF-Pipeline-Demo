@@ -1,9 +1,7 @@
 ### dependency
 tqdm
 dvc
-pandas
-numpy
-PyYAML
+black
 tensorflow==2.5.0
 
 ### local packages -

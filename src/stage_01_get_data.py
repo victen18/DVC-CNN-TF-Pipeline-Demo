@@ -3,18 +3,18 @@ import os
 import shutil
 from tqdm import tqdm
 import logging
-from src.utils.common import read_yaml, create_directories,save_json,copy_files
+from src.utils.common import read_yaml, create_directories, save_json, copy_files
 import random
 
 
-STAGE = "STAGE_NAME" ## <<< change stage name 
+STAGE = "STAGE_NAME"  ## <<< change stage name
 
 logging.basicConfig(
-    filename=os.path.join("logs", 'running_logs.log'), 
-    level=logging.INFO, 
+    filename=os.path.join("logs", "running_logs.log"),
+    level=logging.INFO,
     format="[%(asctime)s: %(levelname)s: %(module)s]: %(message)s",
-    filemode="a"
-    )
+    filemode="a",
+)
 
 
 def get_data(config_path, params_path):
@@ -22,13 +22,17 @@ def get_data(config_path, params_path):
     source_download_dirs = config["source_download_dirs"]
     local_data_dirs = config["local_data_dirs"]
 
-    for source_download_dir,local_data_dir in tqdm(zip(source_download_dirs,local_data_dirs),total=2,desc="list of the folders",colour="red"):
+    for source_download_dir, local_data_dir in tqdm(
+        zip(source_download_dirs, local_data_dirs),
+        total=2,
+        desc="list of the folders",
+        colour="red",
+    ):
         create_directories([local_data_dir])
-        copy_files(source_download_dir,local_data_dir)
-    
+        copy_files(source_download_dir, local_data_dir)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     args = argparse.ArgumentParser()
     args.add_argument("--config", "-c", default="configs/config.yaml")
     args.add_argument("--params", "-p", default="params.yaml")
@@ -36,9 +40,9 @@ if __name__ == '__main__':
 
     try:
         logging.info("\n********************")
-        logging.info(f">>>>> stage {STAGE} started <<<<<")
+        logging.info(f">>>>> stage 01 started <<<<<")
         get_data(config_path=parsed_args.config, params_path=parsed_args.params)
-        logging.info(f">>>>> stage {STAGE} completed!<<<<<\n")
+        logging.info(f">>>>> stage 01 completed!<<<<<\n")
     except Exception as e:
         logging.exception(e)
         raise e
