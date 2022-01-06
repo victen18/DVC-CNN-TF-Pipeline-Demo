@@ -1,0 +1,94 @@
+[2022-01-06 04:50:56,411: INFO: stage_01_get_data]: 
+********************
+[2022-01-06 04:50:56,411: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-01-06 04:50:56,413: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-06 04:50:56,413: ERROR: stage_01_get_data]: 'local_data_dir'
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_get_data.py", line 23, in get_data
+    local_data_dir = config["local_data_dir"]
+KeyError: 'local_data_dir'
+[2022-01-06 04:51:25,006: INFO: stage_01_get_data]: 
+********************
+[2022-01-06 04:51:25,006: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-01-06 04:51:25,008: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-06 04:51:25,008: ERROR: stage_01_get_data]: name 'local_data_dirs' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_get_data.py", line 25, in get_data
+    for source_download_dir,local_data_dir in tqdm(zip(source_download_dirs,local_data_dirs),total=2,desc="list of the folders",color="red"):
+NameError: name 'local_data_dirs' is not defined
+[2022-01-06 04:51:52,988: INFO: stage_01_get_data]: 
+********************
+[2022-01-06 04:51:52,988: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-01-06 04:51:52,990: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-06 04:51:53,001: ERROR: stage_01_get_data]: "Unknown argument(s): {'color': 'red'}"
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_get_data.py", line 25, in get_data
+    for source_download_dir,local_data_dir in tqdm(zip(source_download_dirs,local_data_dirs),total=2,desc="list of the folders",color="red"):
+  File "C:\Users\vikram\anaconda3\envs\DVC_CNN_TF\lib\site-packages\tqdm\std.py", line 1018, in __init__
+    TqdmKeyError("Unknown argument(s): " + str(kwargs)))
+tqdm.std.TqdmKeyError: "Unknown argument(s): {'color': 'red'}"
+[2022-01-06 05:23:03,271: INFO: stage_01_get_data]: 
+********************
+[2022-01-06 05:23:03,271: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-01-06 05:23:03,273: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-06 05:23:03,284: ERROR: stage_01_get_data]: "Unknown argument(s): {'color': 'red'}"
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_get_data.py", line 25, in get_data
+    for source_download_dir,local_data_dir in tqdm(zip(source_download_dirs,local_data_dirs),total=2,desc="list of the folders",color="red"):
+  File "C:\Users\vikram\anaconda3\envs\DVC_CNN_TF\lib\site-packages\tqdm\std.py", line 1018, in __init__
+    TqdmKeyError("Unknown argument(s): " + str(kwargs)))
+tqdm.std.TqdmKeyError: "Unknown argument(s): {'color': 'red'}"
+[2022-01-06 05:23:54,592: INFO: stage_01_get_data]: 
+********************
+[2022-01-06 05:23:54,593: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-01-06 05:23:54,594: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-06 05:23:54,607: INFO: common]: created directory at: data/cat
+[2022-01-06 05:23:54,608: ERROR: stage_01_get_data]: name 'copy_files' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_get_data.py", line 27, in get_data
+    copy_files(source_download_dir,local_data_dir)
+NameError: name 'copy_files' is not defined
+[2022-01-06 05:24:41,002: INFO: stage_01_get_data]: 
+********************
+[2022-01-06 05:24:41,002: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-01-06 05:24:41,004: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-06 05:24:41,016: INFO: common]: created directory at: data/cat
+[2022-01-06 05:24:41,045: ERROR: stage_01_get_data]: name 'local_data_dir' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_get_data.py", line 27, in get_data
+    copy_files(source_download_dir,local_data_dir)
+  File "c:\users\vikram\dvc_cnn\dvc-cnn-tf-pipeline-demo\src\utils\common.py", line 26, in copy_files
+    dest = os.path.join(local_data_dir,file)
+NameError: name 'local_data_dir' is not defined
+[2022-01-06 05:29:38,892: INFO: stage_01_get_data]: 
+********************
+[2022-01-06 05:29:38,892: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-01-06 05:29:38,894: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-06 05:29:38,906: INFO: common]: created directory at: data/cat
+[2022-01-06 05:30:33,682: INFO: common]: copy of files succeded
+[2022-01-06 05:30:33,685: INFO: common]: created directory at: data/dog
+[2022-01-06 05:31:29,137: INFO: common]: copy of files succeded
+[2022-01-06 05:31:29,140: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME completed!<<<<<
+
+[2022-01-06 05:42:42,464: INFO: stage_01_get_data]: 
+********************
+[2022-01-06 05:42:42,464: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-01-06 05:42:42,466: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-06 05:42:42,478: INFO: common]: created directory at: data/cat
+[2022-01-06 05:42:53,411: INFO: common]: copy of files succeded
+[2022-01-06 05:42:53,414: INFO: common]: created directory at: data/dog
+[2022-01-06 05:43:04,910: INFO: common]: copy of files succeded
+[2022-01-06 05:43:04,912: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME completed!<<<<<
+

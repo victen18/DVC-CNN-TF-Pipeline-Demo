@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python src/stage_01_get_data.py --config=configs/config.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: 438f0098e1c66a2b65c45f667cd13f02
+      size: 502
+    - path: src/stage_01_get_data.py
+      md5: 66045a99d7fc99d5df028bdf179fe42c
+      size: 1457
+    - path: src/utils/common.py
+      md5: d9c51c4972fe424bd43905d955181afa
+      size: 1062
+    outs:
+    - path: data/cat
+      md5: ec9e53216af60e09723e11464cf97066.dir
+      size: 261913822
+      nfiles: 12500
+    - path: data/dog
+      md5: 1a38b0de8193bb65118c33b4aba4bc21.dir
+      size: 310001554
+      nfiles: 12500
