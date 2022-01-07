@@ -19,29 +19,39 @@ logging.basicConfig(
 
 
 def prepare_base_model(config_path, params_path):
-   
+
     config = read_yaml(config_path)
     params = read_yaml(params_path)
 
     artifacts = config["artifacts"]
-    artifacts_dir = config["ARTIFACTS_DIR"]
+    artifacts_dir = artifacts["ARTIFACTS_DIR"]
 
     base_model_dir = artifacts["BASE_MODEL_DIR"]
     base_model_name = artifacts["BASE_MODEL_NAME"]
 
-    base_model_dir_path = os.path.join(artifacts_dir,base_model_dir)
+    base_model_dir_path = os.path.join(artifacts_dir, base_model_dir)
     create_directories([base_model_dir_path])
 
-    base_model_path = os.path.join(base_model_dir_path,base_model_name)
+    base_model_path = os.path.join(base_model_dir_path, base_model_name)
 
-    base_model = get_VGG16_model()
+    base_model = get_VGG16_model(
+        input_shape=params["IMAGE_SIZE"], model_path=base_model_path
+    )
 
-    full_model = prepare_full_model(base_model)
+    full_model = prepare_full_model(
+        base_model,
+        learning_rate=params["LEARNING_RATE"],
+        CLASSES=2,
+        freeze_all=True,
+        freeze_till=None,
+    )
 
-    updated_base_model_path = os.path.join(base_model_dir_path,artifacts["UPDATED_BASE_MODEL_NAME"])
+    updated_full_model_path = os.path.join(
+        base_model_dir_path, artifacts["UPDATED_BASE_MODEL_NAME"]
+    )
 
-    full_model.save(updated_base_model_path)
-    
+    full_model.save(updated_full_model_path)
+    logging.info(f"full untrained model is saved at {updated_full_model_path}")
 
 
 if __name__ == "__main__":
