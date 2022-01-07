@@ -7,11 +7,11 @@ stages:
       md5: 438f0098e1c66a2b65c45f667cd13f02
       size: 502
     - path: src/stage_01_get_data.py
-      md5: 66045a99d7fc99d5df028bdf179fe42c
-      size: 1457
+      md5: d67550c8f761f00b9ae9a5b1600546f7
+      size: 1495
     - path: src/utils/common.py
-      md5: d9c51c4972fe424bd43905d955181afa
-      size: 1062
+      md5: 7e1be3a5b12c3ca4c13afe2b4ce99ca6
+      size: 1073
     outs:
     - path: data/cat
       md5: ec9e53216af60e09723e11464cf97066.dir
@@ -21,3 +21,32 @@ stages:
       md5: 1a38b0de8193bb65118c33b4aba4bc21.dir
       size: 310001554
       nfiles: 12500
+  prepare_base_model:
+    cmd: python src/stage_02_prepare_base_model.py --config=configs/config.yaml --params=params.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: 438f0098e1c66a2b65c45f667cd13f02
+      size: 502
+    - path: src/stage_02_prepare_base_model.py
+      md5: 3da4c6bb7618ab9443e67b4d96d1ae9f
+      size: 2166
+    - path: src/utils/common.py
+      md5: 7e1be3a5b12c3ca4c13afe2b4ce99ca6
+      size: 1073
+    - path: src/utils/model.py
+      md5: af36b086fd4cfe7563b2a024a7e37411
+      size: 1779
+    params:
+      params.yaml:
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        LEARNING_RATE: 0.001
+    outs:
+    - path: artifacts/base_model/base_model.h5
+      md5: c17a63bdee9fd169f7feb3df0a33f419
+      size: 58920272
+    - path: artifacts/base_model/updated_base_model.h5
+      md5: a3cba793889ed9397c5ec22858e65dcb
+      size: 59132008
