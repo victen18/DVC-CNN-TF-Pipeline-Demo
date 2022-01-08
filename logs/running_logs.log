@@ -399,3 +399,12 @@ _________________________________________________________________
 [2022-01-07 05:49:21,164: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\base_model\updated_base_model.h5
 [2022-01-07 05:49:21,165: INFO: stage_02_prepare_base_model]: >>>>> stage 02 completed!<<<<<
 
+[2022-01-08 03:12:17,071: INFO: stage_03_prepare_callback]: 
+********************
+[2022-01-08 03:12:17,071: INFO: stage_03_prepare_callback]: >>>>> stage stage_03_prepare_callback started <<<<<
+[2022-01-08 03:12:17,073: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-08 03:12:17,073: INFO: common]: created directory at: artifacts\tensorboard_log_dir
+[2022-01-08 03:12:17,073: INFO: common]: created directory at: artifacts\checkpoints
+[2022-01-08 03:12:17,074: INFO: common]: created directory at: artifacts\callbacks
+[2022-01-08 03:12:17,074: INFO: stage_03_prepare_callback]: >>>>> stage stage_03_prepare_callback completed! and saved as binary<<<<<
+
