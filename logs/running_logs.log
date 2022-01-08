@@ -419,3 +419,14 @@ _________________________________________________________________
 [2022-01-08 04:55:57,466: INFO: callbacks]: checkpoint callback is saved at artifacts\callbacks\tensorboard_cb.cb as binary file
 [2022-01-08 04:55:57,466: INFO: stage_03_prepare_callback]: >>>>> stage stage_03_prepare_callback completed! and saved as binary<<<<<
 
+[2022-01-08 05:27:26,729: INFO: stage_03_prepare_callback]: 
+********************
+[2022-01-08 05:27:26,729: INFO: stage_03_prepare_callback]: >>>>> stage stage_03_prepare_callback started <<<<<
+[2022-01-08 05:27:26,731: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-08 05:27:26,731: INFO: common]: created directory at: artifacts\tensorboard_log_dir
+[2022-01-08 05:27:26,731: INFO: common]: created directory at: artifacts\checkpoints
+[2022-01-08 05:27:26,731: INFO: common]: created directory at: artifacts\callbacks
+[2022-01-08 05:27:27,685: INFO: callbacks]: tensorboard callback is saved at artifacts\callbacks\tensorboard_cb.cb as binary file
+[2022-01-08 05:27:27,690: INFO: callbacks]: checkpoint callback is saved at artifacts\callbacks\checkpoint_cb.cb as binary file
+[2022-01-08 05:27:27,690: INFO: stage_03_prepare_callback]: >>>>> stage stage_03_prepare_callback completed! and saved as binary<<<<<
+
