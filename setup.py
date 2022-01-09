@@ -12,7 +12,9 @@ LIST_OF_REQUIREMENTS = [
     "dvc",
     "black"
     "tensorflow==2.5.0",
-    "joblib"
+    "joblib",
+    "pillow",
+    "scipy"
 ]
 
 

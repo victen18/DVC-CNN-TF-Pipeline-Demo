@@ -463,3 +463,125 @@ _________________________________________________________________
 [2022-01-08 05:46:32,731: INFO: callbacks]: checkpoint callback is saved at artifacts\callbacks\checkpoint_cb.cb as binary file
 [2022-01-08 05:46:32,731: INFO: stage_03_prepare_callback]: >>>>> stage stage_03_prepare_callback completed! and saved as binary<<<<<
 
+[2022-01-09 04:35:50,284: INFO: stage_04_train]: 
+********************
+[2022-01-09 04:35:50,284: INFO: stage_04_train]: >>>>> stage four started <<<<<
+[2022-01-09 04:35:50,289: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 04:35:50,290: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 04:35:50,290: INFO: common]: created directory at: artifacts\model
+[2022-01-09 04:35:53,466: INFO: model]: untrained models is read from: artifacts\base_model\updated_base_model.h5
+[2022-01-09 04:35:53,466: INFO: model]: untrained full model summary: <function __get_model_summary at 0x0000020CE6F2FC18>
+[2022-01-09 04:35:53,487: INFO: callbacks]: saved callbacks are loaded and now ready to be used
+[2022-01-09 04:35:53,730: INFO: data_management]: data augmentation is used for training
+[2022-01-09 04:35:54,509: INFO: data_management]: train and valid generator is created
+[2022-01-09 04:35:54,514: ERROR: stage_04_train]: Could not import PIL.Image. The use of `load_img` requires PIL.
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 73, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 52, in train_model
+    callbacks=callbacks,
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\training.py", line 1147, in fit
+    steps_per_execution=self._steps_per_execution)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 1364, in get_data_handler
+    return DataHandler(*args, **kwargs)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 1166, in __init__
+    model=model)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 939, in __init__
+    **kwargs)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 809, in __init__
+    peek, x = self._peek_and_restore(x)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 943, in _peek_and_restore
+    return x[0], x
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\keras_preprocessing\image\iterator.py", line 65, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\keras_preprocessing\image\iterator.py", line 230, in _get_batches_of_transformed_samples
+    interpolation=self.interpolation)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\keras_preprocessing\image\utils.py", line 111, in load_img
+    raise ImportError('Could not import PIL.Image. '
+ImportError: Could not import PIL.Image. The use of `load_img` requires PIL.
+[2022-01-09 04:37:12,838: INFO: stage_04_train]: 
+********************
+[2022-01-09 04:37:12,838: INFO: stage_04_train]: >>>>> stage four started <<<<<
+[2022-01-09 04:37:12,840: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 04:37:12,840: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 04:37:12,841: INFO: common]: created directory at: artifacts\model
+[2022-01-09 04:37:14,059: INFO: model]: untrained models is read from: artifacts\base_model\updated_base_model.h5
+[2022-01-09 04:37:14,059: INFO: model]: untrained full model summary: <function __get_model_summary at 0x000001BD90ECFC18>
+[2022-01-09 04:37:14,060: INFO: callbacks]: saved callbacks are loaded and now ready to be used
+[2022-01-09 04:37:14,291: INFO: data_management]: data augmentation is used for training
+[2022-01-09 04:37:15,038: INFO: data_management]: train and valid generator is created
+[2022-01-09 04:37:15,059: ERROR: stage_04_train]: Image transformations require SciPy. Install SciPy.
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 73, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 52, in train_model
+    callbacks=callbacks,
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\training.py", line 1147, in fit
+    steps_per_execution=self._steps_per_execution)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 1364, in get_data_handler
+    return DataHandler(*args, **kwargs)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 1166, in __init__
+    model=model)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 939, in __init__
+    **kwargs)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 809, in __init__
+    peek, x = self._peek_and_restore(x)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\tensorflow\python\keras\engine\data_adapter.py", line 943, in _peek_and_restore
+    return x[0], x
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\keras_preprocessing\image\iterator.py", line 65, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\keras_preprocessing\image\iterator.py", line 238, in _get_batches_of_transformed_samples
+    x = self.image_data_generator.apply_transform(x, params)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\keras_preprocessing\image\image_data_generator.py", line 874, in apply_transform
+    order=self.interpolation_order)
+  File "C:\Users\vikram\anaconda3\envs\dvc_cnn_tf\lib\site-packages\keras_preprocessing\image\affine_transformations.py", line 281, in apply_affine_transform
+    raise ImportError('Image transformations require SciPy. '
+ImportError: Image transformations require SciPy. Install SciPy.
+[2022-01-09 04:37:47,464: INFO: stage_04_train]: 
+********************
+[2022-01-09 04:37:47,464: INFO: stage_04_train]: >>>>> stage four started <<<<<
+[2022-01-09 04:37:47,466: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 04:37:47,467: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 04:37:47,467: INFO: common]: created directory at: artifacts\model
+[2022-01-09 04:37:48,696: INFO: model]: untrained models is read from: artifacts\base_model\updated_base_model.h5
+[2022-01-09 04:37:48,696: INFO: model]: untrained full model summary: <function __get_model_summary at 0x000001ADA83A0C18>
+[2022-01-09 04:37:48,696: INFO: callbacks]: saved callbacks are loaded and now ready to be used
+[2022-01-09 04:37:48,974: INFO: data_management]: data augmentation is used for training
+[2022-01-09 04:37:49,715: INFO: data_management]: train and valid generator is created
+[2022-01-09 05:23:49,966: INFO: stage_04_train]: 
+********************
+[2022-01-09 05:23:49,966: INFO: stage_04_train]: >>>>> stage four started <<<<<
+[2022-01-09 05:23:49,972: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 05:23:49,987: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 05:23:49,988: INFO: common]: created directory at: artifacts\model
+[2022-01-09 05:23:51,985: INFO: model]: untrained models is read from: artifacts\base_model\updated_base_model.h5
+[2022-01-09 05:23:51,985: INFO: model]: untrained full model summary: <function __get_model_summary at 0x000001FD28D40C18>
+[2022-01-09 05:23:51,988: INFO: callbacks]: saved callbacks are loaded and now ready to be used
+[2022-01-09 05:23:52,962: INFO: data_management]: data augmentation is used for training
+[2022-01-09 05:23:55,385: INFO: data_management]: train and valid generator is created
+[2022-01-09 06:45:18,998: INFO: common]: created directory at: artifacts\model
+[2022-01-09 06:45:18,999: ERROR: stage_04_train]: 'str' object has no attribute 'replacce'
+Traceback (most recent call last):
+  File "src/stage_04_train.py", line 73, in <module>
+    train_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_train.py", line 58, in train_model
+    model_file_path = get_unique_path_to_save_model(trained_model_dir)
+  File "c:\users\vikram\dvc_cnn\dvc-cnn-tf-pipeline-demo\src\utils\model.py", line 70, in get_unique_path_to_save_model
+    timestamp = get_timestamp(name=model_name)
+  File "c:\users\vikram\dvc_cnn\dvc-cnn-tf-pipeline-demo\src\utils\common.py", line 50, in get_timestamp
+    timestamp = time.asctime().replacce(" ","_").replace(":",".")
+AttributeError: 'str' object has no attribute 'replacce'
+[2022-01-09 06:46:32,583: INFO: stage_04_train]: 
+********************
+[2022-01-09 06:46:32,583: INFO: stage_04_train]: >>>>> stage four started <<<<<
+[2022-01-09 06:46:32,585: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 06:46:32,589: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 06:46:32,590: INFO: common]: created directory at: artifacts\model
+[2022-01-09 06:46:33,827: INFO: model]: untrained models is read from: artifacts\base_model\updated_base_model.h5
+[2022-01-09 06:46:33,827: INFO: model]: untrained full model summary: <function __get_model_summary at 0x000001B0B8300C18>
+[2022-01-09 06:46:33,828: INFO: callbacks]: saved callbacks are loaded and now ready to be used
+[2022-01-09 06:46:34,062: INFO: data_management]: data augmentation is used for training
+[2022-01-09 06:46:34,822: INFO: data_management]: train and valid generator is created
+[2022-01-09 07:25:47,446: INFO: common]: created directory at: artifacts\model
+[2022-01-09 07:25:47,504: INFO: stage_04_train]: trained models saved in artifacts\model\model_at_Sun_Jan__9_07.25.47_2022_.h5
+[2022-01-09 07:25:47,504: INFO: stage_04_train]: >>>>> stage four completed! training completed <<<<<n

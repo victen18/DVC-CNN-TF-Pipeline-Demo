@@ -47,6 +47,6 @@ def save_json(path: str, data: dict) -> None:
 
 
 def get_timestamp(name: str) -> str:
-    timestamp = time.asctime().replacce(" ","_").replace(":",".")
+    timestamp = time.asctime().replace(" ","_").replace(":",".")
     unique_name = f"{name}_at_{timestamp}"
     return unique_name

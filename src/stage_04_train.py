@@ -3,7 +3,7 @@ import os
 from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directories
-from src.utils.model import load_full_model, get_unqique_path_to_save_model
+from src.utils.model import load_full_model, get_unique_path_to_save_model
 from src.utils.callbacks import get_callbacks
 from src.utils.data_management import train_valid_generator
 
@@ -55,7 +55,7 @@ def train_model(config_path: str, params_path: str) -> None:
     trained_model_dir = os.path.join(artifacts_dir,artifacts["TRAINED_MODEL_DIR"])
     create_directories([trained_model_dir])
 
-    model_file_path = get_unqique_path_to_save_model(trained_model_dir)
+    model_file_path = get_unique_path_to_save_model(trained_model_dir)
     model.save(model_file_path)
 
     logging.info(f"trained models saved in {model_file_path}")
